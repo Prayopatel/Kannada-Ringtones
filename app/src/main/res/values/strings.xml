@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Telugu Ringtones - రింగ్‌టోన్</string>
-    <string name="banner_ad">ca-app-pub-8439251259097719/9085996417</string>
-    <string name="Interstitial">ca-app-pub-8439251259097719/3630473843</string>
+    <string name="app_name">Kannada Ringtones ಕನ್ನಡ ಹಾಡು</string>
+    <string name="banner_ad">ca-app-pub-1644663616641412/3031591472</string>
+    <string name="Interstitial">ca-app-pub-1644663616641412/1726248662</string>
 
-    <string name="App_ad">ca-app-pub-8439251259097719~2015522734</string>
+    <string name="App_ad">ca-app-pub-1644663616641412~4320622413</string>
 
-    <string name="r1">Naatu Naatu - Telugu</string>
-    <string name="r2">Oo Antava Mava Oo oo Antava Mava</string>
-    <string name="r3">Buttaboma Buttaboma Song</string>
-    <string name="r4">Gundelona Gundelona Ninnu </string>
-    <string name="r5">Enno Rathrulosthayi Kaani</string>
-    <string name="r6">Inthadam - Sita Raman</string>
-    <string name="r7">Naa Madhi - Telugu</string>
-    <string name="r8">Pulsar Bike Medha Ranu Bava - Pulsar Bike</string>
-    <string name="r9">Hey Rama - Sita Raman </string>
-    <string name="r10">Kumkumala - Brahmastra</string>
-    <string name="r11">Mastaaru Mastaaru - Sir </string>
-    <string name="r12">Megham Karigena - Thiru </string>
-    <string name="r13">Kgf Mehbooba Telugu</string>
-    <string name="r14">Dheera Dheera Dheera Dheera Oo Ranadheera</string>
-    <string name="r15">Maate Vinadhuga - Taxiwaala</string>
-    <string name="r16">Waltair Veerayya Relation </string>
-    <string name="r17">Gundellona Gundellona - Bgm </string>
-    <string name="r18">Neetho Unte Chalu - Telugu</string>
-    <string name="r19">Jala Jala Jala Patham - Telugu</string>
-    <string name="r20">Jinthaak Jinthaak Ravi Teja</string>
-    <string name="r21">Dhamaka - Ravi Teja</string>
-    <string name="r22">Saami Saami</string>
-    <string name="r23">Kalalo Kuda Kastam </string>
-    <string name="r24">Evarini Adaganu - Love  </string>
-    <string name="r25">Thangame Thangame - Veeram</string>
-    <string name="r26">Seeti Maar - Telugu</string>
-    <string name="r27">Pushpa Pushpa Raj - Allu Arjun Entry</string>
+    <string name="r1">Belakina Kavithe - Banaras Kannada</string>
+    <string name="r2">BOMBE HELUTAITHE - Kannada Song</string>
+    <string name="r3">Brahma Bareda Haaleyalli - Thavarina Thottilu</string>
+    <string name="r4">Brahma Murari Surarchita Lingam - Ajay Warrier </string>
+    <string name="r5">Darshan Kannada Feeling Song</string>
+    <string name="r6">Dheera Dheera KGF2 Yash Kannada</string>
+    <string name="r7">Ege Thane Prema  Belakina Kavithe - Banaras</string>
+    <string name="r8">Googly - Yash Kannada</string>
+    <string name="r9">Heege Thane Prema - Belakina Kavithe - Lofi</string>
+    <string name="r10">James Kannada - James</string>
+    <string name="r11">kadalo kadalo kannada</string>
+    <string name="r12">Kannada Song - Matthe Nodabeda </string>
+    <string name="r13">Kgf - Bgm Yash</string>
+    <string name="r14">Kushiyella Kale Haaki - Jagave Neenu - Love 360</string>
+    <string name="r15">Love 360 - Romantic</string>
+    <string name="r16">Marali Manasagide Love Song</string>
+    <string name="r17">Mehabooba - Kgf 2 </string>
+    <string name="r18">Modalasala - Yash (Kannada)</string>
+    <string name="r19">Neenaade Naa - Kannada</string>
+    <string name="r20">neeralli sanna</string>
+    <string name="r21">Pushpavati - Kranti</string>
+    <string name="r22">Ra Ra Rakkamma - Kannada Song</string>
+    <string name="r23">Singara siriye - Kantara - Kannada</string>
+    <string name="r24">Thandaani Naane Thanithandaano - Kgf</string>
+    <string name="r25">Tum Tum Tum Tum - Romantic</string>
+    <string name="r26">Varaha Roopam - Kannada</string>
+    <string name="r27">Vishnuvardhan - Love</string>
 </resources>
