@@ -1,8 +1,10 @@
 package com.kannada.ringtoneapp.best.songs.ringtones.ui.list;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,13 +17,12 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-import com.google.android.gms.ads.interstitial.InterstitialAd;
-import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+
+import com.facebook.ads.Ad;
+import com.facebook.ads.AdError;
+import com.facebook.ads.InterstitialAd;
+import com.facebook.ads.InterstitialAdListener;
+import com.kannada.ringtoneapp.best.songs.ringtones.Adconfig;
 import com.kannada.ringtoneapp.best.songs.ringtones.R;
 import com.kannada.ringtoneapp.best.songs.ringtones.ui.ringtone.RingtoneFragment;
 import java.util.ArrayList;
@@ -34,33 +35,14 @@ public class RingtoneListFragment extends Fragment {
     private RecyclerView recyclerView;
     private ArrayList<Integer> ringtoneList;
     private ArrayList<String> ringtoneNameList;
-    private InterstitialAd mInterstitialAd;
+    private InterstitialAd interstitialAd;
 
     @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         View inflate = layoutInflater.inflate(R.layout.fragment_ringtonelist, viewGroup, false);
-        MobileAds.initialize(getContext(), new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
-        AdRequest adRequest = new AdRequest.Builder().build();
-        InterstitialAd.load(getContext(),getString(R.string.Interstitial), adRequest,
-                new InterstitialAdLoadCallback() {
-                    @Override
-                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
-                        // The mInterstitialAd reference will be null until
-                        // an ad is loaded.
-                        mInterstitialAd = interstitialAd;
-                    }
+        interstitialAd = new InterstitialAd(getContext(), Adconfig.INTERSTITIAL);
 
-                    @Override
-                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                        // Handle the error
-                        mInterstitialAd = null;
-                    }
-                });
         inflate.setClickable(true);
         inflate.setFocusable(true);
         myRecyclerView(inflate);
@@ -89,11 +71,60 @@ public class RingtoneListFragment extends Fragment {
         this.listCardAdapter.notifyDataSetChanged();
     }
 
+    public void ShowFbInter(){
+        InterstitialAdListener interstitialAdListener = new InterstitialAdListener() {
+            @Override
+            public void onInterstitialDisplayed(Ad ad) {
+
+            }
+
+            @Override
+            public void onInterstitialDismissed(Ad ad) {
+
+
+            }
+
+            @Override
+            public void onError(Ad ad, AdError adError) {
+
+            }
+
+            @Override
+            public void onAdLoaded(Ad ad) {
+                interstitialAd.show();
+
+            }
+
+            @Override
+            public void onAdClicked(Ad ad) {
+
+            }
+
+            @Override
+            public void onLoggingImpression(Ad ad) {
+
+            }
+        };
+        interstitialAd.loadAd(
+                interstitialAd.buildLoadAdConfig()
+                        .withAdListener(interstitialAdListener)
+                        .build());
+    }
+
+
+
 
     public void fragmentTransferMethod(int i) {
-        if (mInterstitialAd != null) {
-            mInterstitialAd.show(getActivity());
-        }
+        ProgressDialog progressDialog = ProgressDialog.show(getContext(),"Ad Loading","Please Wait Loading Ad...",true);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                progressDialog.dismiss();
+                ShowFbInter();
+            }
+        },3000);
+
 
         MediaPlayer mediaPlayer = this.mediaPlayer;
         if (mediaPlayer != null && mediaPlayer.isPlaying()) {
